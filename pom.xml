@@ -80,6 +80,8 @@
     <!-- =========================================================================================================== -->
     <!-- Build process -->
     <build>
+        <!-- Project final name -->
+        <finalName>${project.name}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -87,6 +89,20 @@
             </plugin>
         </plugins>
     </build>
+    <!-- =========================================================================================================== -->
+
+    <!-- =========================================================================================================== -->
+    <!-- Repositories -->
+    <!--    <repositories>
+            <repository>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <id>bintray-straumat-cerise</id>
+                <name>bintray</name>
+                <url>https://dl.bintray.com/straumat/cerise</url>
+            </repository>
+        </repositories>-->
     <!-- =========================================================================================================== -->
 
 </project>
