@@ -4,7 +4,6 @@ import com.oakinvest.cerise.dto.CurrencyPairInformationParameters;
 import com.oakinvest.cerise.dto.CurrencyPairInformationResult;
 import com.oakinvest.cerise.dto.Grouping;
 import com.oakinvest.cerise.service.CurrencyPairInformationService;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,10 +14,8 @@ import java.util.List;
 /**
  * Currency-pair information implementation.
  */
-@Primary
 @Service
 public class MyCurrencyPairInformationService implements CurrencyPairInformationService {
-
 
     @Override
     public List<CurrencyPairInformationResult> getCurrencyPairInformation(final CurrencyPairInformationParameters parameters) {
@@ -42,8 +39,8 @@ public class MyCurrencyPairInformationService implements CurrencyPairInformation
         dummyResponse.setFractionDigits(fractionDigits);
         dummyResponse.setMinPoll(300);
         dummyResponse.setLongPoll(true);
-        dummyResponse.setHistory(1457231416L);
-        dummyResponse.setArchive(145723141L);
+        dummyResponse.setHistory(1457231416D);
+        dummyResponse.setArchive(145723141D);
         results.add(dummyResponse);
 
         return results;

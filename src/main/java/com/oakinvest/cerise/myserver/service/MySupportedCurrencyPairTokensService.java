@@ -3,7 +3,6 @@ package com.oakinvest.cerise.myserver.service;
 import com.oakinvest.cerise.dto.SupportedCurrencyPairTokensParameters;
 import com.oakinvest.cerise.dto.SupportedCurrencyPairTokensResult;
 import com.oakinvest.cerise.service.SupportedCurrencyPairTokensService;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
@@ -12,7 +11,6 @@ import java.util.List;
 /**
  * Enumerating supported currency-pair token implementation.
  */
-@Primary
 @Service
 public class MySupportedCurrencyPairTokensService implements SupportedCurrencyPairTokensService {
 

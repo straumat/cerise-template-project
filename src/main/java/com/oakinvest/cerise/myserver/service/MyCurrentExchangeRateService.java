@@ -3,7 +3,6 @@ package com.oakinvest.cerise.myserver.service;
 import com.oakinvest.cerise.dto.CurrentExchangeRateParameters;
 import com.oakinvest.cerise.dto.CurrentExchangeRateResult;
 import com.oakinvest.cerise.service.CurrentExchangeRateService;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
@@ -12,7 +11,6 @@ import java.util.List;
 /**
  * Current exchange rate implementation.
  */
-@Primary
 @Service
 public class MyCurrentExchangeRateService implements CurrentExchangeRateService {
 

@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.oakinvest.cerise</groupId>
-    <artifactId>myserver</artifactId>
+    <artifactId>my-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>myserver</name>
-    <description>Template project for your own BIP-0171 compliant server</description>
+    <description>Template project to create your own BIP-0171 compliant server</description>
 
     <!-- =========================================================================================================== -->
     <!-- Spring boot -->
@@ -16,7 +16,7 @@
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot -->
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.0.4.RELEASE</version>
         <relativePath/>
     </parent>
     <!-- =========================================================================================================== -->
@@ -29,6 +29,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+        <commons-lang.version>3.7</commons-lang.version>
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
         <swagger.version>2.9.2</swagger.version>
         <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
@@ -41,11 +43,15 @@
     <dependencies>
         <!-- Cerise -->
         <dependency>
-            <groupId>com.oakinvest</groupId>
-            <artifactId>cerise</artifactId>
-            <version>0.2-SNAPSHOT</version>
+            <groupId>com.oakinvest.cerise</groupId>
+            <artifactId>cerise-api</artifactId>
+            <version>0.3-SNAPSHOT</version>
         </dependency>
         <!-- Spring boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -62,8 +68,17 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger-ui.version}</version>
         </dependency>
+        <!-- Java -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
     </dependencies>
+    <!-- =========================================================================================================== -->
 
+    <!-- =========================================================================================================== -->
+    <!-- Build process -->
     <build>
         <plugins>
             <plugin>
@@ -72,5 +87,6 @@
             </plugin>
         </plugins>
     </build>
+    <!-- =========================================================================================================== -->
 
 </project>
