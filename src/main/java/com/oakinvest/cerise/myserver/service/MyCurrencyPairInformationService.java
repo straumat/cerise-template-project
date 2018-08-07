@@ -4,6 +4,7 @@ import com.oakinvest.cerise.dto.CurrencyPairInformationParameters;
 import com.oakinvest.cerise.dto.CurrencyPairInformationResult;
 import com.oakinvest.cerise.dto.Grouping;
 import com.oakinvest.cerise.service.CurrencyPairInformationService;
+import com.oakinvest.cerise.util.generic.CeriseService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.List;
  * Currency-pair information implementation.
  */
 @Service
-public class MyCurrencyPairInformationService implements CurrencyPairInformationService {
+public class MyCurrencyPairInformationService extends CeriseService implements CurrencyPairInformationService {
 
     @Override
     public List<CurrencyPairInformationResult> getCurrencyPairInformation(final CurrencyPairInformationParameters parameters) {

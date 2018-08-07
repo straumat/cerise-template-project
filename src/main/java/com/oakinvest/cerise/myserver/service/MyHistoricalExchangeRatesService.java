@@ -3,6 +3,7 @@ package com.oakinvest.cerise.myserver.service;
 import com.oakinvest.cerise.dto.HistoricalExchangeRatesParameters;
 import com.oakinvest.cerise.dto.HistoricalExchangeRatesResult;
 import com.oakinvest.cerise.service.HistoricalExchangeRatesService;
+import com.oakinvest.cerise.util.generic.CeriseService;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
@@ -12,7 +13,7 @@ import java.util.List;
  * Historical exchange rates implementation.
  */
 @Service
-public class MyHistoricalExchangeRatesService implements HistoricalExchangeRatesService {
+public class MyHistoricalExchangeRatesService extends CeriseService implements HistoricalExchangeRatesService {
 
     @Override
     public List<HistoricalExchangeRatesResult> getHistoricalExchangeRates(final HistoricalExchangeRatesParameters parameters) {
