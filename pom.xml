@@ -9,6 +9,13 @@
     <packaging>jar</packaging>
     <name>myserver</name>
     <description>Template project to create your own BIP-0171 compliant server</description>
+    <licenses>
+        <license>
+            <name>BSD 2-Clause "Simplified" License</name>
+            <url>https://github.com/straumat/cerise-server-template/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <!-- =========================================================================================================== -->
     <!-- Spring boot -->
@@ -44,7 +51,7 @@
         <!-- Cerise -->
         <dependency>
             <groupId>com.oakinvest.cerise</groupId>
-            <artifactId>cerise-api</artifactId>
+            <artifactId>cerise</artifactId>
             <version>0.3-SNAPSHOT</version>
         </dependency>
         <!-- Spring boot -->
@@ -93,16 +100,16 @@
 
     <!-- =========================================================================================================== -->
     <!-- Repositories -->
-    <!--    <repositories>
-            <repository>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-                <id>bintray-straumat-cerise</id>
-                <name>bintray</name>
-                <url>https://dl.bintray.com/straumat/cerise</url>
-            </repository>
-        </repositories>-->
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-straumat-cerise</id>
+            <name>bintray</name>
+            <url>https://dl.bintray.com/straumat/cerise</url>
+        </repository>
+    </repositories>
     <!-- =========================================================================================================== -->
 
 </project>
