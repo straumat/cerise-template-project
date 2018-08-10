@@ -3,6 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- =========================================================================================================== -->
+    <!-- Project information -->
     <groupId>com.oakinvest.cerise</groupId>
     <artifactId>my-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -16,6 +18,7 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <!-- =========================================================================================================== -->
 
     <!-- =========================================================================================================== -->
     <!-- Spring boot -->
@@ -36,24 +39,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
-        <commons-lang.version>3.7</commons-lang.version>
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-        <swagger.version>2.9.2</swagger.version>
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-        <swagger-ui.version>2.9.2</swagger-ui.version>
+        <!-- gitflow -->
+        <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
+        <gitflow-maven-plugin.version>1.9.0</gitflow-maven-plugin.version>
     </properties>
     <!-- =========================================================================================================== -->
 
     <!-- =========================================================================================================== -->
     <!-- Dependencies -->
     <dependencies>
-        <!-- Cerise -->
-        <dependency>
-            <groupId>com.oakinvest.cerise</groupId>
-            <artifactId>cerise</artifactId>
-            <version>0.3-SNAPSHOT</version>
-        </dependency>
         <!-- Spring boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,23 +58,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Swagger -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger-ui.version}</version>
-        </dependency>
-        <!-- Java -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang.version}</version>
-        </dependency>
     </dependencies>
     <!-- =========================================================================================================== -->
 
@@ -90,9 +67,31 @@
         <!-- Project final name -->
         <finalName>${project.name}</finalName>
         <plugins>
+            <!-- Spring boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- Release plugin -->
+            <plugin>
+                <groupId>com.amashchenko.maven.plugin</groupId>
+                <artifactId>gitflow-maven-plugin</artifactId>
+                <version>${gitflow-maven-plugin.version}</version>
+                <configuration>
+                    <gitFlowConfig>
+                        <developmentBranch>development</developmentBranch>
+                    </gitFlowConfig>
+                    <commitMessages>
+                        <featureStartMessage>update versions for feature branch</featureStartMessage>
+                        <featureFinishMessage>update versions for development branch</featureFinishMessage>
+                        <hotfixStartMessage>update versions for hotfix</hotfixStartMessage>
+                        <hotfixFinishMessage>update for next development version</hotfixFinishMessage>
+                        <releaseStartMessage>update versions for release</releaseStartMessage>
+                        <releaseFinishMessage>update for next development version</releaseFinishMessage>
+                        <tagHotfixMessage>tag hotfix</tagHotfixMessage>
+                        <tagReleaseMessage>tag release</tagReleaseMessage>
+                    </commitMessages>
+                </configuration>
             </plugin>
         </plugins>
     </build>
