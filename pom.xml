@@ -6,10 +6,10 @@
     <!-- =========================================================================================================== -->
     <!-- Project information -->
     <groupId>com.oakinvest.cerise</groupId>
-    <artifactId>my-server</artifactId>
+    <artifactId>cerise-server-template</artifactId>
     <version>0.4-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>myserver</name>
+    <name>cerise-server-template</name>
     <description>Template project to create your own BIP-0171 compliant server</description>
     <licenses>
         <license>
