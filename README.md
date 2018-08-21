@@ -30,6 +30,8 @@ Unit tests are here : [MyHistoricalExchangeRatesTest](https://github.com/strauma
 ## Run it.
 Once in the `cerise-server-template` directory, you can run the server with the `mvn spring-boot:run` command.
 
+You can access the API at this address : [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
+
 ## Package it.
 Once in the `cerise-server-template` directory, package it with the `mvn package` command. This will produce a file named `cerise-server-template.jar` in the `target` directory.
 
