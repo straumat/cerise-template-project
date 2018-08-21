@@ -6,10 +6,10 @@
     <!-- =========================================================================================================== -->
     <!-- Project information -->
     <groupId>com.oakinvest.cerise</groupId>
-    <artifactId>my-server</artifactId>
-    <version>0.3</version>
+    <artifactId>cerise-server-template</artifactId>
+    <version>0.4</version>
     <packaging>jar</packaging>
-    <name>myserver</name>
+    <name>cerise-server-template</name>
     <description>Template project to create your own BIP-0171 compliant server</description>
     <licenses>
         <license>
@@ -39,6 +39,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <!-- Cerise -->
+        <!-- https://bintray.com/straumat/cerise/api -->
+        <cerise.version>${project.version}</cerise.version>
+        <!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+        <commons-lang.version>3.7</commons-lang.version>
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+        <swagger.version>2.9.2</swagger.version>
+        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+        <swagger-ui.version>2.9.2</swagger-ui.version>
         <!-- gitflow -->
         <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
         <gitflow-maven-plugin.version>1.9.0</gitflow-maven-plugin.version>
@@ -48,6 +57,12 @@
     <!-- =========================================================================================================== -->
     <!-- Dependencies -->
     <dependencies>
+        <!-- Cerise -->
+        <dependency>
+            <groupId>com.oakinvest.cerise</groupId>
+            <artifactId>cerise</artifactId>
+            <version>0.4</version>
+        </dependency>
         <!-- Spring boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -57,12 +72,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <!-- Cerise -->
-        <dependency>
-            <groupId>com.oakinvest.cerise</groupId>
-            <artifactId>cerise</artifactId>
-            <version>0.3</version>
         </dependency>
     </dependencies>
     <!-- =========================================================================================================== -->
