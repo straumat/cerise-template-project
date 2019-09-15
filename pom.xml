@@ -50,7 +50,7 @@
         <swagger-ui.version>2.9.2</swagger-ui.version>
         <!-- gitflow -->
         <!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
-        <gitflow-maven-plugin.version>1.12.0</gitflow-maven-plugin.version>
+        <gitflow-maven-plugin.version>1.13.0</gitflow-maven-plugin.version>
     </properties>
     <!-- =========================================================================================================== -->
 
